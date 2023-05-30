@@ -7,7 +7,7 @@
     }
 }
 
-@keyframes fadeIn {
+@keyframes fadeInTop {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -16,6 +16,52 @@
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInNavi {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -42,6 +88,48 @@
 }
 
 .fadeIn {
-    animation-delay: 1s;
-  animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 2.5s;
+}
+
+.fadeInTop {
+    animation: fadeInTop 1.5s ease-in-out forwards;
+}
+
+.fadeInBottom{
+    animation: fadeInBottom 1.5s ease-in-out forwards;
+}
+
+.fadeInLeft{
+    animation: fadeInLeft 1.5s ease-in-out forwards;
+}
+
+.fadeInRight{
+    animation: fadeInRight 2s ease-in-out forwards;
+}
+
+.fadeInNavi{
+  animation: fadeInNavi 1s ease-in-out forwards;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
 }
