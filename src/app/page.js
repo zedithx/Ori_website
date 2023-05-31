@@ -165,58 +165,60 @@ export default function Orientation() {
             <link rel="canonical" href="http://orientation.sutd.edu.sg"/>
         </Head>
             <body className="bg-white container-fluid font-yatraone">
-                <section id='navi-bar' className='bg-white p-6 md:p-2'>
+                <section id='navi-bar' className='bg-white p-5 md:p-2 relative'>
                     <NaviBar/>
                 </section>
-                <section id='header' className='bg-[#EBC89F] pb-4 pt-10 text-center'>
-                    <div className={`${show ? styles.fadeIn : "invisible"}`}>
-                        <h1 className='text-[6vw] -mb-4'>LUMINO</h1>
-                        <h2>@sutdlife</h2>
-                        <h2>orientation@studentgov.sutd.edu.sg</h2>
-                    </div>
-                </section>
-                <section id='countdown' className='bg-[#EBC89F] text-center pt-6 h-fit'>
-                    <div className={`${styles.shape} ${show ? styles.rect : ""}`}>
-                        <div className={`${show ? styles.fadeIn : "invisible"}`}>
-                            <h1 className='text-[2.5vw] mt-20'>SUTD FRESHMAN ORIENTATION 2023</h1>
-                            <table className='inline-block mt-16 text-white'>
-                                <CountdownTimer targetDate={ORI_DATE}/>
-                                {/*<tr className='text-lg md:text-[4.5vw]'>*/}
-                                {/*    <td className='px-4'>00</td>*/}
-                                {/*    <td className='px-4'>00</td>*/}
-                                {/*    <td className='px-4'>00</td>*/}
-                                {/*    <td className='px-4'>00</td>*/}
-                                {/*</tr>*/}
-                                <tr className='text-lg md:text-xl'>
-                                    <td className='px-4 pt-4'>DAYS</td>
-                                    <td className='px-4 pt-4'>HOURS</td>
-                                    <td className='px-4 pt-4'>MINUTES</td>
-                                    <td className='px-4 pt-4'>SECONDS</td>
-                                </tr>
-                            </table>
-                            <h1 className='text-[2vw] mt-6'>7-9 SEPTEMBER 2023</h1>
+                <div className='bg-[url("../../public/images/backgrounds/civilisation.jpg")] bg-cover bg-no-repeat '>
+                    <section id='header' className='pb-4 pt-10 text-center'>
+                        <div className={`${show ? styles.fadeInTop : "opacity-0"}`}>
+                            <h1 className='md:text-[6vw] text-[16vw] -mb-4 -z-50'>LUMINO</h1>
+                            <h2>@sutdlife</h2>
+                            <h2>orientation@studentgov.sutd.edu.sg</h2>
                         </div>
-                    </div>
-                </section>
-                <section id='storyline' className='bg-[#EBC89F] pt-10 pb-20 text-center'>
-                    <h1 className='text-[8vw] md:text-[4vw] pb-2 opacity-0' ref={sectionTopRefs[0]}>Storyline</h1>
-                    <div className='rounded-3xl bg-white w-11/12 mx-auto opacity-0' ref={sectionTopRefs[1]}>
-                        <h1 className='text-xl p-6'>
-                            A long time ago, the ancient civilisation of Lumino thrived under the magnificent crystal blessings of the Great Guardians. It was led by the four esteemed houses: Obsida, Andesa, Perida, and Lazura. One fateful day, the supply of crystals, the lifeblood of Lumino, came to an abrupt halt, plunging the houses into a state of confusion and worry. Years passed, and just as hope waned, in a moment of miraculous wonder, a giant crystal plummeted from the sky, shattering into four uneven fragments. The four great houses each laid claim to the largest fragment, convinced that they alone held the key to Lumino's survival. With tensions rising, each house must now vie fiercely and prove their worth to secure the largest share of the precious crystal. Time is of the essence, and the battle for glory has begun. Will you heed the call and join the fight to etch your name in history?
-                        </h1>
-                    </div>
-                    <div className='opacity-0 flex md:flex-row flex-wrap w-full md:w-11/12 md:gap-4 lg:gap-8 xl:gap-12 2xl:gap-16 md:justify-center
-                     gap-10 pt-16 mx-auto' ref={sectionBottomRefs[0]}>
-                        {house_logos.map(logo => (
-                            // eslint-disable-next-line react/jsx-key
-                        <Image alt='highlights' className='object-scale-down w-1/3 md:w-1/6 mx-auto' src={logo}/>
-                            ))}
-                    </div>
-                </section>
-                <section id='navigation' className='bg-white text-center pt-28'>
-                    <h1 className='md:text-[3vw] text-[5vw] opacity-0' ref={sectionTopRefs[2]}>GETTING HERE </h1>
-                    <div className='flex flex-col-reverse md:flex-row  md:justify-around gap-2 px-12 pt-10'>
-                        <div className='md:w-5/12 w-11/12 text-left text-[#6B0B0B] tracking-wider text-[2.5vw] pt-10 md:pt-0 md:text-[1.4vw] opacity-0' ref={sectionLeftRefs[0]}>
+                    </section>
+                    <section id='countdown' className='text-center pt-6 h-fit'>
+                        <div className={`${styles.shape} ${show ? styles.rect : ""}`}>
+                            <div className={`${show ? styles.fadeInHeader : "opacity-0"}`}>
+                                <h1 className='md:text-[2.5vw] text-[5.5vw] mt-20'>SUTD FRESHMAN ORIENTATION 2023</h1>
+                                    <table className='inline-block mt-16 text-white'>
+                                        <CountdownTimer targetDate={ORI_DATE}/>
+                                        {/*<tr className='text-lg md:text-[4.5vw]'>*/}
+                                        {/*    <td className='px-4'>00</td>*/}
+                                        {/*    <td className='px-4'>00</td>*/}
+                                        {/*    <td className='px-4'>00</td>*/}
+                                        {/*    <td className='px-4'>00</td>*/}
+                                        {/*</tr>*/}
+                                        <tr className='text-xs md:text-xl'>
+                                            <td className='px-2 md:px-4 pt-4'>DAYS</td>
+                                            <td className='px-2 md:px-4 pt-4'>HOURS</td>
+                                            <td className='px-2 md:px-4 pt-4'>MINUTES</td>
+                                            <td className='px-2 md:px-4 pt-4'>SECONDS</td>
+                                        </tr>
+                                    </table>
+                                <h1 className='md:text-[2vw] text-[4vw] md:mt-6 mt-12'>7-9 SEPTEMBER 2023</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section id='storyline' className='pt-10 pb-20 text-center'>
+                        <h1 className='text-[11vw] md:text-[4vw] pb-10 md:pb-2 opacity-0' ref={sectionTopRefs[0]}>Storyline</h1>
+                        <div className='rounded-3xl bg-white w-11/12 mx-auto opacity-0' ref={sectionTopRefs[1]}>
+                            <h1 className='text-lg md:text-xl p-6'>
+                                A long time ago, the ancient civilisation of Lumino thrived under the magnificent crystal blessings of the Great Guardians. It was led by the four esteemed houses: Obsida, Andesa, Perida, and Lazura. One fateful day, the supply of crystals, the lifeblood of Lumino, came to an abrupt halt, plunging the houses into a state of confusion and worry. Years passed, and just as hope waned, in a moment of miraculous wonder, a giant crystal plummeted from the sky, shattering into four uneven fragments. The four great houses each laid claim to the largest fragment, convinced that they alone held the key to Lumino's survival. With tensions rising, each house must now vie fiercely and prove their worth to secure the largest share of the precious crystal. Time is of the essence, and the battle for glory has begun. Will you heed the call and join the fight to etch your name in history?
+                            </h1>
+                        </div>
+                        <div className='opacity-0 flex md:flex-row flex-wrap w-full md:w-11/12 md:gap-4 lg:gap-8 xl:gap-12 2xl:gap-16 md:justify-center
+                         gap-10 pt-16 mx-auto' ref={sectionBottomRefs[0]}>
+                            {house_logos.map(logo => (
+                                // eslint-disable-next-line react/jsx-key
+                            <Image alt='highlights' className='object-scale-down w-1/3 md:w-1/6 mx-auto' src={logo}/>
+                                ))}
+                        </div>
+                    </section>
+                </div>
+                <section id='navigation' className='bg-[url("../../public/images/backgrounds/white-civilisation.png")] bg-cover bg-no-repeat text-center pt-28'>
+                    <h1 className='md:text-[3vw] text-[9vw] opacity-0' ref={sectionTopRefs[2]}>GETTING HERE </h1>
+                    <div className='flex flex-col-reverse md:flex-row  md:justify-around gap-2 md:px-12 px-4 pt-10'>
+                        <div className='md:w-5/12 w-11/12 text-left text-[#6B0B0B] tracking-wider text-[4vw] pt-10 md:pt-0 ml-4 md:ml-0 md:text-[1.4vw] opacity-0' ref={sectionLeftRefs[0]}>
                             <h1>We are at 8 Somapah Road, Singapore 487372</h1>
                             <br/>
                             <h1><u>By Train</u></h1>
@@ -243,45 +245,47 @@ export default function Orientation() {
                             </ul>
 
                         </div>
-                        <div className='md:w-6/12 w-11/12 h-[38vw] mx-auto md:my-auto opacity-0' ref={sectionRightRefs[0]}>
+                        <div className='md:w-6/12 w-11/12 md:h-[38vw] h-[50vw] mx-auto md:my-auto opacity-0' ref={sectionRightRefs[0]}>
                             <iframe className="responsive-iframe"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7249803314576!2d103.96114931399768!3d1.3413700619781364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3cd899f260cb%3A0x99becabc6d025518!2sSingapore%20University%20of%20Technology%20%26%20Design%20(SUTD)!5e0!3m2!1sen!2ssg!4v1653292770304!5m2!1sen!2ssg"
                                     width="100%" height="100%" allowFullScreen="" loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
-                    <div className='text-black text-[3.5vw] md:text-[2vw] pt-20 text-center md:text-left pb-10'>
+                    <div className='text-black text-[6vw] md:text-[2vw] px-2 pt-20 text-center md:text-left pb-10'>
                         <h1 className='md:pl-20 pb-14 opacity-0' ref={sectionTopRefs[4]}>Need help navigating around SUTD? We got you.</h1>
-                        <div className='w-full md:w-7/12 mx-auto opacity-0' ref={sectionBottomRefs[1]}>
+                        <div className='w-full md:w-7/12 mx-auto opacity-0 pb-10 md:pb-0' ref={sectionBottomRefs[1]}>
                             <Image layout='responsive' id='sutd-map' alt='sutd map' src={sutd_map}></Image>
                         </div>
                     </div>
                 </section>
-                <section id='faq' className='bg-[#EBC89F] text-center'>
-                     <h1 className='text-[3.2vw] text-black pb-2 pt-20 pb-4 opacity-0' ref={sectionTopRefs[5]}>FAQ</h1>
-                     <div className='rounded-3xl bg-white w-11/12 mx-auto'>
-                         <ol className='list-decimal text-left px-20 py-10 text-lg'>
-                             {questions.map((question, index) => {
-                                 return(
-                                     <div className='opacity-0' ref={sectionLeftRefs[index+1]}>
-                                         <li className='text-[#6B0B0B] pt-8'>{question.question}</li>
-                                         <h1> {question.answer}</h1>
-                                     </div>
-                                )
-                             })}
-                         </ol>
-                     </div>
-                </section>
-                <section id='sponsors' className='bg-[#EBC89F] text-center pt-36'>
-                    <h1 className='text-[3vw] pb-14 opacity-0' ref={sectionTopRefs[6]}>SPONSORS</h1>
-                    <div className='hidden md:block bg-white w-11/12 rounded-lg mx-auto p-10'>
-                    {/*    insert compiled image here */}
-                    </div>
-                     <div className='md:hidden bg-white w-11/12 rounded-lg pb-0 mx-auto p-4 mt-6'>
-                    {/*    insert compiled mobile image here
-                    */}
-                    </div>
-                </section>
+                <div className='bg-[url("../../public/images/backgrounds/civilisation.jpg")] bg-cover bg-no-repeat'>
+                    <section id='faq' className='text-center'>
+                         <h1 className='md:text-[3vw] text-[8vw] text-black pb-2 pt-20 pb-4 opacity-0' ref={sectionTopRefs[5]}>FAQ</h1>
+                         <div className='rounded-3xl bg-white w-11/12 mx-auto'>
+                             <ol className='list-decimal text-left md:px-20 px-14 py-10 text-lg'>
+                                 {questions.map((question, index) => {
+                                     return(
+                                         <div className='opacity-0' ref={sectionLeftRefs[index+1]}>
+                                             <li className='text-[#6B0B0B] pt-8'>{question.question}</li>
+                                             <h1> {question.answer}</h1>
+                                         </div>
+                                    )
+                                 })}
+                             </ol>
+                         </div>
+                    </section>
+                    <section id='sponsors' className='text-center pt-36'>
+                        <h1 className='md:text-[3vw] text-[8vw] pb-14 opacity-0' ref={sectionTopRefs[6]}>SPONSORS</h1>
+                        <div className='hidden md:block bg-white w-11/12 rounded-lg mx-auto p-10'>
+                        {/*    insert compiled image here */}
+                        </div>
+                         <div className='md:hidden bg-white w-11/12 rounded-lg pb-0 mx-auto p-4 mt-6'>
+                        {/*    insert compiled mobile image here
+                        */}
+                        </div>
+                    </section>
+                </div>
             </body>
       </>
   )

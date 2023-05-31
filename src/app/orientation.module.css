@@ -74,21 +74,17 @@
     -webkit-animation-iteration-count: 2;
   width: 100px;
   height: 100px;
-  background-color: #CA925B;
   border-radius: 50%;
+  background-image:  linear-gradient(20deg, #F0E2B6 0%,  #EBC89F 20%, #FFAD4A 60%, #F0E2B6 100%);
   display: inline-block;
   transition: width 1.5s, height 1.5s, border-radius 1.5s;
  margin-bottom: 150px;
 }
 
 .shape.rect {
-  width: 70%;
-  height: 450px;
+  width: 80%;
+  height: 500px;
   border-radius: 100px;
-}
-
-.fadeIn {
-    animation: fadeIn 2.5s;
 }
 
 .fadeInTop {
@@ -106,9 +102,24 @@
 .fadeInRight{
     animation: fadeInRight 2s ease-in-out forwards;
 }
+.fadeInRight1{
+  animation: fadeInRight 1s ease-in-out forwards;
+}
+
+.fadeInRight2{
+  animation: fadeInRight 1.5s ease-in-out forwards;
+}
+
+.fadeInRight3{
+  animation: fadeInRight 2.5s ease-in-out forwards;
+}
 
 .fadeInNavi{
   animation: fadeInNavi 1s ease-in-out forwards;
+}
+
+.fadeInHeader{
+  animation: fadeInBottom 2s ease-in-out forwards;
 }
 
 .container {
