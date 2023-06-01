@@ -81,7 +81,7 @@ export default function Orientation() {
                   ref.current.classList.add(`${styles.fadeInTop}`);
           }
         },
-        { threshold: 1.0 } // intersection threshold
+        { threshold: 0.5 } // intersection threshold
       );
     });
 
@@ -213,8 +213,8 @@ export default function Orientation() {
                     <section id='storyline' className='pt-10 pb-20 text-center'>
                         <h1 className='text-[11vw] md:text-[4vw] pb-10 md:pb-2 opacity-0' ref={sectionTopRefs[0]}>Storyline</h1>
                         <div className='rounded-3xl bg-white w-11/12 mx-auto opacity-0' ref={sectionTopRefs[1]}>
-                            <h1 className='text-lg md:text-xl p-6'>
-                                A long time ago, the ancient civilisation of Lumino thrived under the magnificent crystal blessings of the Great Guardians. It was led by the four esteemed houses: Obsida, Andesa, Perida, and Lazura. One fateful day, the supply of crystals, the lifeblood of Lumino, came to an abrupt halt, plunging the houses into a state of confusion and worry. Years passed, and just as hope waned, in a moment of miraculous wonder, a giant crystal plummeted from the sky, shattering into four uneven fragments. The four great houses each laid claim to the largest fragment, convinced that they alone held the key to Lumino's survival. With tensions rising, each house must now vie fiercely and prove their worth to secure the largest share of the precious crystal. Time is of the essence, and the battle for glory has begun. Will you heed the call and join the fight to etch your name in history?
+                            <h1 className='text-base text-justify md:text-xl p-6'>
+                                A long time ago, the ancient civilisation of Lumino thrived under the magnificent crystal blessings of the Great Guardians. It was led by the four esteemed houses: Obsida, Andesa, Perida, and Lazura.<br></br><br></br> One fateful day, the supply of crystals, the lifeblood of Lumino, came to an abrupt halt, plunging the houses into a state of confusion and worry. <br></br><br></br>Years passed, and just as hope waned, in a moment of miraculous wonder, a giant crystal plummeted from the sky, shattering into four uneven fragments. The four great houses each laid claim to the largest fragment, convinced that they alone held the key to Lumino's survival. <br></br><br></br>With tensions rising, each house must now vie fiercely and prove their worth to secure the largest share of the precious crystal. Time is of the essence, and the battle for glory has begun. Will you heed the call and join the fight to etch your name in history?
                             </h1>
                         </div>
                         <div className='opacity-0 flex md:flex-row flex-wrap w-full md:w-11/12 md:gap-4 lg:gap-8 xl:gap-12 2xl:gap-16 md:justify-center
