@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import React, {useEffect, useRef, useState} from "react"
-import { Link } from "react-scroll"
 import './globals.css'
 import styles from './orientation.module.css'
 
@@ -170,7 +169,7 @@ export default function Orientation() {
                 </section>
                 <div className='bg-[url("../../public/images/backgrounds/civilisation.jpg")] bg-cover bg-no-repeat'>
                     <section id='header' className='pt-10 text-center'>
-                        <div className={`${show ? styles.fadeInTop : ""}`}>
+                        <div className={`${show ? styles.fadeInTop : "opacity-0"}`}>
                             <h1 className='md:text-[6vw] text-[16vw] -mb-4 -z-50'>LUMINO</h1>
                             <h2>@sutdlife</h2>
                             <h2>orientation@studentgov.sutd.edu.sg</h2>
