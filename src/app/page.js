@@ -194,7 +194,7 @@ export default function Orientation() {
                                             {/*    <td className='px-4'>00</td>*/}
                                             {/*    <td className='px-4'>00</td>*/}
                                             {/*</tr>*/}
-                                            <tr className='text-xs md:text-xl'>
+                                            <tr className='text-[3vw] md:text-xl'>
                                                 <td className='px-2 md:px-4 pt-4'>DAYS</td>
                                                 <td className='px-2 md:px-4 pt-4'>HOURS</td>
                                                 <td className='px-2 md:px-4 pt-4'>MINUTES</td>
