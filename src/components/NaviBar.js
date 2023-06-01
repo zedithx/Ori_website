@@ -22,7 +22,7 @@ export default function NaviBar() {
         {navState && (
             <div className="w-5/12 absolute top-10 right-0 z-50">
                 <div className={`${navState ? styles.fadeInNavi: ""}`}>
-                    <ul className="pl-2 py-3 mt-4 text-black bg-[url('../../public/images/backgrounds/civilisation-navi.jpeg')] rounded-2xl text-left">
+                    <ul className="mt-4 p-3 text-black bg-[url('../../public/images/backgrounds/civilisation-navi.jpeg')] rounded-2xl text-left">
                         {[
                         ['STORYLINE', 'storyline'],
                         ['GETTING HERE', 'navigation'],
@@ -31,8 +31,8 @@ export default function NaviBar() {
                       ].map(([title, url]) => (
                             // eslint-disable-next-line react/jsx-key
                         <div className={`${navState ? styles.fadeInRight: ""}`}>
-                            <li className='pb-2'>
-                                <Link onClick={() => setNavState(!navState)} to={url} smooth={true} className="pl-4 py-5">{title}</Link>
+                            <li className='py-2'>
+                                <Link onClick={() => setNavState(!navState)} to={url} smooth={true}>{title}</Link>
                             </li>
                         </div>
                         ))}

@@ -67,7 +67,7 @@ const questions = [
 
 export default function Orientation() {
     const [show, setShow] = useState(false)
-    const sectionTopRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
+    const sectionTopRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
     const sectionBottomRefs = [useRef(null), useRef(null)];
     const sectionLeftRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null),
     useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
@@ -264,7 +264,7 @@ export default function Orientation() {
                         </div>
                     </div>
                     <div className='text-black text-[6vw] md:text-[2vw] px-2 pt-20 text-center md:text-left pb-10'>
-                        <h1 className='md:pl-20 pb-14 opacity-0' ref={sectionTopRefs[4]}>Need help navigating around SUTD? We got you.</h1>
+                        <h1 className='md:pl-20 pb-14 opacity-0' ref={sectionTopRefs[3]}>Need help navigating around SUTD? We got you.</h1>
                         <div className='w-full md:w-7/12 mx-auto opacity-0 pb-10 md:pb-0' ref={sectionBottomRefs[1]}>
                             <Image layout='responsive' id='sutd-map' alt='sutd map' src={sutd_map}></Image>
                         </div>
@@ -272,7 +272,7 @@ export default function Orientation() {
                 </section>
                 <div className='bg-[url("../../public/images/backgrounds/civilisation.jpg")] bg-cover bg-no-repeat'>
                     <section id='faq' className='text-center'>
-                         <h1 className='md:text-[3vw] text-[8vw] text-black pb-2 pt-20 pb-4 opacity-0' ref={sectionTopRefs[5]}>FAQ</h1>
+                         <h1 className='md:text-[3vw] text-[8vw] text-black pb-2 pt-20 pb-4 opacity-0' ref={sectionTopRefs[4]}>FAQ</h1>
                          <div className='rounded-3xl bg-white w-11/12 mx-auto'>
                              <ol className='list-decimal text-left md:px-20 px-14 py-10 text-lg'>
                                  {questions.map((question, index) => {
@@ -287,7 +287,7 @@ export default function Orientation() {
                          </div>
                     </section>
                     <section id='sponsors' className='text-center pt-36'>
-                        <h1 className='md:text-[3vw] text-[8vw] pb-14 opacity-0' ref={sectionTopRefs[6]}>SPONSORS</h1>
+                        <h1 className='md:text-[3vw] text-[8vw] pb-14 opacity-0' ref={sectionTopRefs[5]}>SPONSORS</h1>
                         <div className='hidden md:block bg-white w-11/12 rounded-lg mx-auto p-10'>
                         {/*    insert compiled image here */}
                         </div>
