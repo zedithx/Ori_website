@@ -78,7 +78,6 @@
   background-image:  linear-gradient(20deg, #F0E2B6 0%,  #EBC89F 20%, #FFAD4A 60%, #F0E2B6 100%);
   display: inline-block;
   transition: width 1.5s, height 1.5s, border-radius 1.5s;
- margin-bottom: 150px;
 }
 
 .shape.rect {

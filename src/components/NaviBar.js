@@ -42,7 +42,7 @@ export default function NaviBar() {
         )}
 
         <div className='md:w-[8.5vw] w-[23vw] absolute left-4 top-1/2 -translate-y-1/2'>
-            <Image src={sutd_logo}/>
+            <a href='https://www.sutd.edu.sg/' target='_blank' rel="noopener noreferrer"><Image src={sutd_logo}/></a>
         </div>
         <nav className="w-full md:space-x-0 lg:space-x-4 lg:mr-8 text-black invisible md:visible md:flex md:justify-end">
           {[

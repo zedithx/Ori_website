@@ -71,8 +71,8 @@ export default function Orientation() {
     const sectionTopRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
     const sectionBottomRefs = [useRef(null), useRef(null)];
     const sectionLeftRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null),
-    useRef(null), useRef(null), useRef(null), useRef(null),];
-    const sectionRightRefs = [useRef(null)];
+    useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
+    const sectionRightRefs = [useRef(null), useRef(null), useRef(null)];
 
   useEffect(() => {
     const topObservers = sectionTopRefs.map((ref) => {
@@ -168,37 +168,49 @@ export default function Orientation() {
                 <section id='navi-bar' className='bg-white p-5 md:p-2 relative'>
                     <NaviBar/>
                 </section>
-                <div className='bg-[url("../../public/images/backgrounds/civilisation.jpg")] bg-cover bg-no-repeat '>
-                    <section id='header' className='pb-4 pt-10 text-center'>
-                        <div className={`${show ? styles.fadeInTop : "opacity-0"}`}>
+                <div className='bg-[url("../../public/images/backgrounds/civilisation.jpg")] bg-cover bg-no-repeat'>
+                    <section id='header' className='pt-10 text-center'>
+                        <div className={`${show ? styles.fadeInTop : ""}`}>
                             <h1 className='md:text-[6vw] text-[16vw] -mb-4 -z-50'>LUMINO</h1>
                             <h2>@sutdlife</h2>
                             <h2>orientation@studentgov.sutd.edu.sg</h2>
                         </div>
                     </section>
-                    <section id='countdown' className='text-center pt-6 h-fit'>
-                        <div className={`${styles.shape} ${show ? styles.rect : ""}`}>
-                            <div className={`${show ? styles.fadeInHeader : "opacity-0"}`}>
-                                <h1 className='md:text-[2.5vw] text-[5.5vw] mt-20'>SUTD FRESHMAN ORIENTATION 2023</h1>
-                                    <table className='inline-block mt-16 text-white'>
-                                        <CountdownTimer targetDate={ORI_DATE}/>
-                                        {/*<tr className='text-lg md:text-[4.5vw]'>*/}
-                                        {/*    <td className='px-4'>00</td>*/}
-                                        {/*    <td className='px-4'>00</td>*/}
-                                        {/*    <td className='px-4'>00</td>*/}
-                                        {/*    <td className='px-4'>00</td>*/}
-                                        {/*</tr>*/}
-                                        <tr className='text-xs md:text-xl'>
-                                            <td className='px-2 md:px-4 pt-4'>DAYS</td>
-                                            <td className='px-2 md:px-4 pt-4'>HOURS</td>
-                                            <td className='px-2 md:px-4 pt-4'>MINUTES</td>
-                                            <td className='px-2 md:px-4 pt-4'>SECONDS</td>
-                                        </tr>
-                                    </table>
-                                <h1 className='md:text-[2vw] text-[4vw] md:mt-6 mt-12'>7-9 SEPTEMBER 2023</h1>
+                    <section id='countdown' className='text-center pt-6 md:mb-[20vw] mb-[40vw] relative'>
+                        <div className='relative top-20 left-1/2 -translate-x-1/2 w-11/12'>
+                            <ul className='animate-pulse hidden md:block'>
+                                    <li className='absolute -left-12 -top-32 w-[12vw] opacity-0' ref={sectionLeftRefs[12]}><Image alt='obsida' src={obsida_logo} layout='responsive'/></li>
+                                {/*<div className={`${show ? styles.fadeInRight : ""}`}>*/}
+                                    <li className='absolute -right-12 -top-32 w-[12vw] opacity-0' ref={sectionRightRefs[1]}><Image alt='andesa' src={andesa_logo} layout='responsive'/></li>
+                                {/*</div>*/}
+                            </ul>
+                            <div className={`${styles.shape} ${show ? styles.rect : ""}`}>
+                                <div className={`${show ? styles.fadeInHeader : "opacity-0"}`}>
+                                    <h1 className='md:text-[2.5vw] text-[5.5vw] mt-20'>SUTD FRESHMAN ORIENTATION 2023</h1>
+                                        <table className='inline-block mt-16 text-white'>
+                                            <CountdownTimer targetDate={ORI_DATE}/>
+                                            {/*<tr className='text-lg md:text-[4.5vw]'>*/}
+                                            {/*    <td className='px-4'>00</td>*/}
+                                            {/*    <td className='px-4'>00</td>*/}
+                                            {/*    <td className='px-4'>00</td>*/}
+                                            {/*    <td className='px-4'>00</td>*/}
+                                            {/*</tr>*/}
+                                            <tr className='text-xs md:text-xl'>
+                                                <td className='px-2 md:px-4 pt-4'>DAYS</td>
+                                                <td className='px-2 md:px-4 pt-4'>HOURS</td>
+                                                <td className='px-2 md:px-4 pt-4'>MINUTES</td>
+                                                <td className='px-2 md:px-4 pt-4'>SECONDS</td>
+                                            </tr>
+                                        </table>
+                                    <h1 className='md:text-[2vw] text-[4vw] md:mt-6 mt-12'>7-9 SEPTEMBER 2023</h1>
+                                </div>
                             </div>
+                            <ul className='animate-pulse hidden md:block'>
+                                <li className='absolute -left-12 -bottom-32 w-[12vw] opacity-0' ref={sectionLeftRefs[13]}><Image alt='lazura' src={lazura_logo} layout='responsive'/></li>
+                                <li className='absolute -right-12 -bottom-32 w-[12vw] opacity-0' ref={sectionRightRefs[2]}><Image alt='perida' src={perida_logo} layout='responsive'/></li>
+                            </ul>
                         </div>
-                    </section>
+                        </section>
                     <section id='storyline' className='pt-10 pb-20 text-center'>
                         <h1 className='text-[11vw] md:text-[4vw] pb-10 md:pb-2 opacity-0' ref={sectionTopRefs[0]}>Storyline</h1>
                         <div className='rounded-3xl bg-white w-11/12 mx-auto opacity-0' ref={sectionTopRefs[1]}>
@@ -210,7 +222,7 @@ export default function Orientation() {
                          gap-10 pt-16 mx-auto' ref={sectionBottomRefs[0]}>
                             {house_logos.map(logo => (
                                 // eslint-disable-next-line react/jsx-key
-                            <Image alt='highlights' className='object-scale-down w-1/3 md:w-1/6 mx-auto' src={logo}/>
+                            <Image alt='highlights' className='object-scale-down animate-pulse w-1/3 md:w-1/6 mx-auto' src={logo}/>
                                 ))}
                         </div>
                     </section>
