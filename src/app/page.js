@@ -179,9 +179,9 @@ export default function Orientation() {
                     <section id='countdown' className='text-center pt-6 md:mb-[20vw] mb-[40vw] relative'>
                         <div className='relative top-20 left-1/2 -translate-x-1/2 w-11/12'>
                             <ul className='animate-pulse hidden md:block'>
-                                    <li className='absolute -left-12 -top-32 w-[12vw] opacity-0' ref={sectionLeftRefs[12]}><Image alt='obsida' src={obsida_logo} layout='responsive'/></li>
+                                    <li className='absolute -left-6 -top-32 w-[12vw] opacity-0' ref={sectionLeftRefs[12]}><Image alt='obsida' src={obsida_logo} layout='responsive'/></li>
                                 {/*<div className={`${show ? styles.fadeInRight : ""}`}>*/}
-                                    <li className='absolute -right-12 -top-32 w-[12vw] opacity-0' ref={sectionRightRefs[1]}><Image alt='andesa' src={andesa_logo} layout='responsive'/></li>
+                                    <li className='absolute -right-6 -top-32 w-[12vw] opacity-0' ref={sectionRightRefs[1]}><Image alt='andesa' src={andesa_logo} layout='responsive'/></li>
                                 {/*</div>*/}
                             </ul>
                             <div className={`${styles.shape} ${show ? styles.rect : ""}`}>
@@ -206,8 +206,8 @@ export default function Orientation() {
                                 </div>
                             </div>
                             <ul className='animate-pulse hidden md:block'>
-                                <li className='absolute -left-12 -bottom-32 w-[12vw] opacity-0' ref={sectionLeftRefs[13]}><Image alt='lazura' src={lazura_logo} layout='responsive'/></li>
-                                <li className='absolute -right-12 -bottom-32 w-[12vw] opacity-0' ref={sectionRightRefs[2]}><Image alt='perida' src={perida_logo} layout='responsive'/></li>
+                                <li className='absolute -left-6 -bottom-32 w-[12vw] opacity-0' ref={sectionLeftRefs[13]}><Image alt='lazura' src={lazura_logo} layout='responsive'/></li>
+                                <li className='absolute -right-6 -bottom-32 w-[12vw] opacity-0' ref={sectionRightRefs[2]}><Image alt='perida' src={perida_logo} layout='responsive'/></li>
                             </ul>
                         </div>
                         </section>
