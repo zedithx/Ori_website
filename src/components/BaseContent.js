@@ -337,7 +337,7 @@ export default class Carousel extends Component {
                     </section>
                 ): null}
              {(this.state.currentSlide === 8) ? (
-                <div className='h-screen' data-aos='fade-left'>
+                <div className='md:h-screen h-auto' data-aos='fade-left'>
                 {/*    To put sponsors*/}
                 </div>
                 ): null}
