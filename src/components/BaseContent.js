@@ -323,7 +323,7 @@ export default class Carousel extends Component {
             {(this.state.currentSlide === 7) ? (
                 <section id='faq' className='text-center' data-aos={`${(this.state.previousSlide > 6) ? 'fade-right' : "fade-left"}`}>
                          <div className='rounded-3xl md:h-screen h-[120vw] mt-10 bg-white w-11/12 backdrop-blur mx-auto bg-opacity-25 overflow-auto'>
-                             <ol className='list-decimal text-black font-yatraone text-left md:px-20 px-14 py-4 md:text-lg text-md'>
+                             <ol className='list-decimal text-black font-yatraone text-left md:px-20 px-14 py-4 md:text-lg text-sm'>
                                  {questions.map((question) => {
                                      return(
                                          <div className=''>
