@@ -9,6 +9,8 @@ module.exports = {
       fontFamily: {
         'bigshoulder': ['Big Shoulders Display', 'sans-serif'],
         'yatraone': ['Yatra One', "sans-serif"],
+        'carvedwood': ['Carved Wood Font'],
+        'lookmum': ['Look Mum No Computer']
         },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

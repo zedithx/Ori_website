@@ -87,11 +87,11 @@
 }
 
 .fadeInTop {
-    animation: fadeInTop 1.5s ease-in-out forwards;
+    animation: fadeInTop 2s ease-in-out forwards;
 }
 
 .fadeInBottom{
-    animation: fadeInBottom 1.5s ease-in-out forwards;
+    animation: fadeInBottom 2s ease-in-out forwards;
 }
 
 .fadeInLeft{

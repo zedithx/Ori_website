@@ -4,7 +4,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@font-face {
+  font-family: 'Carved Wood Font';
+  src: url('../fonts/CARVEDWOOD.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Look Mum No Computer';
+  src: url('../fonts/Lookmumnocomputer.otf') format('opentype');
+}
 
 
 
