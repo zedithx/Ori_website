@@ -23,6 +23,7 @@ import {AiOutlineInstagram} from "react-icons/ai";
 
 const ORI_DATE = new Date("2023-09-07")
 
+// commenting to push -ashley
 // mapping
 const house_logos = [obsida_logo, andesa_logo, perida_logo, lazura_logo]
 
