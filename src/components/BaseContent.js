@@ -123,7 +123,7 @@ export default class Carousel extends Component {
                             <Image src={scroll} layout='responsive'/>
                         </div>
                         <div className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:w-2/3 w-1/2 md:text-[1.3vw] text-[2.5vw] text-black font-carvedwood'>
-                            <p>A long time ago, the ancient civilisation of Lumino thrived under the magnificent crystal blessings of the Great Guardians. It was led by the four esteemed houses: <span className='text-[#561D89]'><u>Obsida</u></span>, <span className='text-[#6C3100]'><u>Andesa</u></span>, <span className='text-[#306A42]'><u>Perida</u></span>, and <span className='text-[#461BD1]'><u>Lazura</u></span>.<br></br><br></br> One fateful day, the supply of crystals, the lifeblood of Lumino, came to an abrupt halt, plunging the houses into a state of confusion and worry. <br></br><br></br>Years passed, and just as hope waned, in a moment of miraculous wonder, a giant crystal plummeted from the sky, shattering into four uneven fragments. The four great houses each laid claim to the largest fragment, convinced that they alone held the key to Lumino's survival. <br></br><br></br>With tensions rising, each house must now vie fiercely and prove their worth to secure the largest share of the precious crystal. Time is of the essence, and the battle for glory has begun. Will you heed the call and join the fight to etch your name in history?</p>
+                            <p>A long time ago, the ancient civilisation of Lumino thrived under the magnificent crystal blessings of the Great Guardians. It was led by the four esteemed houses: <span className='text-[#561D89]'><u>Obsida</u></span>, <span className='text-[#6C3100]'><u>Andesa</u></span>, <span className='text-[#306A42]'><u>Perida</u></span>, and <span className='text-[#461BD1]'><u>Lazura</u></span>.<br></br><br></br> One fateful day, the supply of crystals, the lifeblood of Lumino, came to an abrupt halt, plunging the houses into a state of confusion and worry. <br></br><br></br>Years passed, and just as hope waned, in a moment of miraculous wonder, a giant crystal plummeted from the sky, shattering into four uneven fragments. The four great houses each laid claim to the largest fragment, convinced that they alone held the key to Lumino&apos;s survival. <br></br><br></br>With tensions rising, each house must now vie fiercely and prove their worth to secure the largest share of the precious crystal. Time is of the essence, and the battle for glory has begun. Will you heed the call and join the fight to etch your name in history?</p>
                         </div>
                         <div className='absolute md:bottom-0 md:right-0 -bottom-10 right-8 md:w-[12vw] w-[20vw]'>
                         <Image src={totem} layout='responsive'/>
@@ -326,7 +326,7 @@ export default class Carousel extends Component {
                              <ol className='list-decimal text-black font-yatraone text-left md:px-20 px-14 py-4 md:text-lg text-sm'>
                                  {questions.map((question) => {
                                      return(
-                                         <div className=''>
+                                         <div key={question.question}>
                                              <li className='text-[#6B0B0B] pt-8'>{question.question}</li>
                                              <h1> {question.answer}</h1>
                                          </div>

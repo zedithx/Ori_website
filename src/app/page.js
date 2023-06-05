@@ -130,7 +130,7 @@ export default function Orientation() {
                 <div className={`${show ? "hidden" : styles.fadeInBottom}`}>
                 <section id='countdown' className='font-carvedwood text-white text-center bg-[url("../../public/images/backgrounds/civilisation(new).png")] bg-cover bg-no-repeat md:h-auto h-screen bg-center'>
                     <div className='float-left inline-block pt-8 pl-8 md:w-[12vw] w-[40vw]'>
-                        <a href='https://www.sutd.edu.sg/' target='_blank' rel="noopener noreferrer"><Image src={sutd_logo}/></a>
+                        <a href='https://www.sutd.edu.sg/' target='_blank' rel="noopener noreferrer"><Image src={sutd_logo} alt="logo"/></a>
                     </div>
                     <div className='float-right flex flex-row md:pr-12 pt-8 pr-4 md:gap-2'>
                         <a href='https://www.instagram.com/sutdlife/' target='_blank' rel="noopener noreferrer">
@@ -181,7 +181,7 @@ export default function Orientation() {
                 <div className={`${show ? styles.fadeInTop : "hidden"}`}>
                     <section id='storyline' className='font-carvedwood text-center text-white bg-[url("../../public/images/backgrounds/civilisation(new).png")] bg-cover bg-no-repeat md:h-auto h-screen bg-center'>
                          <div className='float-left inline-block md:pt-6 pt-20 md:pl-8 pl-4 md:w-[12vw] w-[40vw]'>
-                        <a href='https://www.sutd.edu.sg/' target='_blank' rel="noopener noreferrer"><Image src={sutd_logo}/></a>
+                        <a href='https://www.sutd.edu.sg/' target='_blank' rel="noopener noreferrer"><Image src={sutd_logo} alt="logo"/></a>
                     </div>
                         <div className='float-right flex flex-row md:pt-8 md:pr-12 pt-20 pr-4 md:gap-2'>
                             <a href='https://www.instagram.com/sutdlife/' target='_blank' rel="noopener noreferrer">
