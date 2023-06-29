@@ -15,6 +15,10 @@ import perida_logo from "../../public/images/logo/perida.png"
 import lazura_logo from "../../public/images/logo/lazura.png"
 import {TbSquareArrowLeft, TbSquareArrowRight} from "react-icons/tb";
 import sutd_map from "../../public/images/sutd_map.png";
+import {AiOutlineInstagram} from "react-icons/ai";
+import {IoMdMail} from "react-icons/io";
+import {SlArrowUp} from "react-icons/sl";
+import setShow from "../app/page"
 
 
 const questions = [
@@ -72,7 +76,6 @@ export default class Carousel extends Component {
         previousSlide: null,
     };
   }
-
   nextSlide = () => {
     let newSlide =
       this.state.currentSlide === 7
@@ -95,21 +98,22 @@ export default class Carousel extends Component {
       previousSlide: prevState.currentSlide
   }));
 };
+
     render() {
         return (
         <>
-        <nav className="w-full md:space-x-10 pt-6 md:pt-10 text-[3.5vw] space-x-4 md:text-[2.5vw] lg:space-x-28 font-lookmum text-white md:visible flex justify-center">
+        <nav className="w-full md:space-x-10 pt-6 md:pb-0 md:pt-10 text-[3.5vw] space-x-4 md:text-[2.5vw] lg:space-x-28 font-lookmum text-white md:visible flex justify-center">
           {[
-            ['STORYLINE', 0],
-              ['HOUSES', 1],
-            ['GETTING HERE', 5],
-            ['FAQ', 7],
-            ['SPONSORS', 8]
+            ['STORYLINE', [0]],
+            ['HOUSES', [1,2,3,4]],
+            ['GETTING HERE', [5, 6]],
+            ['FAQ', [7]],
+            ['SPONSORS', [8]]
           ].map(([title, index]) => (
               // eslint-disable-next-line react/jsx-key
-              <div className={`${(this.state.currentSlide === index) ? 'underline opacity-100' : 'opacity-20'}`}>
+              <div className={`${index.includes(this.state.currentSlide) ? 'underline opacity-100' : 'opacity-20'}`}>
             <Link className='hover:opacity-100 hover:underline' onClick={() => {
-                    this.setCurrentSlide(index);
+                    this.setCurrentSlide(index[0]);
                   }} smooth={true} style={{cursor: 'pointer'}}>{title}</Link>
                   </div>
           ))}
@@ -117,12 +121,12 @@ export default class Carousel extends Component {
             {/*Storyline slide*/}
             {(this.state.currentSlide === 0) ? (
                 <>
-                <div className='md:pt-[5vw] pt-[25vw] h-auto mx-auto' data-aos='fade-right'>
-                    <div className='inline-block md:w-2/3 w-screen relative'>
-                        <div className='rotate-90 md:rotate-0'>
+                <div className='pt-[35vw] md:pt-[3vw] flex justify-center' data-aos='fade-right'>
+                    <div className='inline-block md:w-6/12 relative'>
+                        <div className='rotate-90 w-[120vw] md:w-full md:rotate-0'>
                             <Image src={scroll} layout='responsive'/>
                         </div>
-                        <div className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:w-2/3 w-1/2 md:text-[1.3vw] text-[2.5vw] text-black font-carvedwood'>
+                        <div className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:w-2/3 w-1/2 md:text-[1vw] text-[2.8vw] text-black font-carvedwood'>
                             <p>A long time ago, the ancient civilisation of Lumino thrived under the magnificent crystal blessings of the Great Guardians. It was led by the four esteemed houses: <span className='text-[#561D89]'><u>Obsida</u></span>, <span className='text-[#6C3100]'><u>Andesa</u></span>, <span className='text-[#306A42]'><u>Perida</u></span>, and <span className='text-[#461BD1]'><u>Lazura</u></span>.<br></br><br></br> One fateful day, the supply of crystals, the lifeblood of Lumino, came to an abrupt halt, plunging the houses into a state of confusion and worry. <br></br><br></br>Years passed, and just as hope waned, in a moment of miraculous wonder, a giant crystal plummeted from the sky, shattering into four uneven fragments. The four great houses each laid claim to the largest fragment, convinced that they alone held the key to Lumino's survival. <br></br><br></br>With tensions rising, each house must now vie fiercely and prove their worth to secure the largest share of the precious crystal. Time is of the essence, and the battle for glory has begun. Will you heed the call and join the fight to etch your name in history?</p>
                         </div>
                         <div className='absolute md:bottom-0 md:right-0 -bottom-10 right-8 md:w-[12vw] w-[20vw]'>
@@ -135,33 +139,33 @@ export default class Carousel extends Component {
 
             {/*Houses slide*/}
             {(this.state.currentSlide < 5 && this.state.currentSlide > 0) ? (
-            <div className='md:h-screen h-auto pt-[8vw] pb-[4vw] text-white' data-aos={`${(this.state.previousSlide > 1) ? 'fade-right' : "fade-left"}`}>
+            <div className='md:pt-[4vw] py-[10vw] h-full text-white' data-aos={`${(this.state.previousSlide > 1) ? 'fade-right' : "fade-left"}`}>
                 {/*Navigation Bar for Houses*/}
-                <div className='flex md:flex-col flex-row md:float-left md:pl-20 pl-10 md:text-[5vw] text-[7.5vw] text-white gap-4'>
+                <div className='flex md:flex-col flex-row md:float-left justify-center pb-[4vw] md:pb-0 md:text-[5vw] text-[7.5vw] gap-6 md:pl-24'>
                     <div className={`${(this.state.currentSlide === 1) ? 'underline opacity-100' : 'opacity-20'}`}>
-                        <Link className='hover:opacity-100 hover:underline' onClick={() => {
+                        <Link className='text-[#561D89] hover:opacity-100 hover:underline' onClick={() => {
                 this.setCurrentSlide(1);
               }} smooth={true} style={{cursor: 'pointer'}}>Obsida</Link>
                     </div>
                     <div className={`${(this.state.currentSlide === 2) ? 'underline opacity-100' : 'opacity-20'}`}>
-                        <Link className='hover:opacity-100 hover:underline' onClick={() => {
+                        <Link className='text-[#6C3100] hover:opacity-100 hover:underline' onClick={() => {
                 this.setCurrentSlide(2);
               }} smooth={true} style={{cursor: 'pointer'}}>Andesa</Link>
                     </div>
                     <div className={`${(this.state.currentSlide === 3) ? 'underline opacity-100' : 'opacity-20'}`}>
-                        <Link className='hover:opacity-100 hover:underline' onClick={() => {
+                        <Link className='text-[#306A42] hover:opacity-100 hover:underline' onClick={() => {
                 this.setCurrentSlide(3);
               }} smooth={true} style={{cursor: 'pointer'}}>Perida</Link>
                     </div>
                     <div className={`${(this.state.currentSlide === 4) ? 'underline opacity-100' : 'opacity-20'}`}>
-                        <Link className='hover:opacity-100 hover:underline' onClick={() => {
+                        <Link className='text-[#461BD1] hover:opacity-100 hover:underline' onClick={() => {
                 this.setCurrentSlide(4);
               }} smooth={true} style={{cursor: 'pointer'}}>Lazura</Link>
                     </div>
                 </div>
                 {/*content to display based on house selected*/}
                     {(this.state.currentSlide === 1) ? (
-                    <div className='flex flex-wrap justify-center pt-10 md:pt-0' data-aos='zoom-in'>
+                    <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
                         <div className='md:w-1/4 w-1/2'>
                             <Image loading="eager" src={obsida_logo}/>
                         </div>
@@ -173,7 +177,7 @@ export default class Carousel extends Component {
                     </div>
                         ): null}
                     {(this.state.currentSlide === 2) ? (
-                        <div className='flex flex-wrap justify-center pt-10 md:pt-0' data-aos='zoom-in'>
+                        <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
                             <div className='md:w-1/4 w-1/2'>
                                 <Image loading="eager" src={andesa_logo}/>
                             </div>
@@ -185,7 +189,7 @@ export default class Carousel extends Component {
                         </div>
                         ): null}
                     {(this.state.currentSlide === 3) ? (
-                        <div className='flex flex-wrap justify-center pt-10 md:pt-0' data-aos='zoom-in'>
+                        <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
                             <div className='md:w-1/4 w-1/2'>
                                 <Image loading="eager" src={perida_logo}/>
                             </div>
@@ -197,7 +201,7 @@ export default class Carousel extends Component {
                         </div>
                     ): null}
                     {(this.state.currentSlide === 4) ? (
-                        <div className='flex flex-wrap justify-center pt-10 md:pt-0' data-aos='zoom-in'>
+                        <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
                             <div className='md:w-1/4 w-1/2'>
                                 <Image loading="eager" src={lazura_logo}/>
                             </div>
@@ -217,11 +221,11 @@ export default class Carousel extends Component {
                     {(this.state.currentSlide === 5) ? (
                         <>
                             <div
-                                className='rounded-3xl md:h-auto h-[100vw] mt-10 bg-white w-11/12 backdrop-blur mx-auto overflow-auto bg-opacity-25' data-aos='fade-right'>
+                                className='rounded-3xl mt-10 bg-white h-[100vw] md:h-auto w-11/12 backdrop-blur mx-auto overflow-auto bg-opacity-25' data-aos={`${(this.state.previousSlide > 5) ? 'fade-left' : "fade-right"}`}>
                                 <div
-                                    className='flex flex-col-reverse md:flex-row  md:justify-around gap-2 md:px-12 px-4 pt-10'>
+                                    className='flex flex-col-reverse md:flex-row md:justify-around gap-2 md:px-12 px-4 pt-10'>
                                     <div
-                                        className='md:w-5/12 w-11/12 font-yatraone text-left text-black tracking-wider text-[4vw] pt-10 md:pt-0 ml-4 md:ml-0 md:text-[1.1vw]'>
+                                        className='md:w-5/12 w-11/12 font-yatraone text-left text-black tracking-wider text-[4vw] pt-10 md:pt-0 ml-4 md:ml-0 md:text-[0.8vw]'>
                                         <h1>We are at 8 Somapah Road, Singapore 487372</h1>
                                         <br/>
                                         <h1 className='text-[#6B0B0B]'><u>By Train</u></h1>
@@ -253,7 +257,7 @@ export default class Carousel extends Component {
                                             <li>Service No: 47, 118</li>
                                         </ul>
                                     </div>
-                                    <div className='md:w-6/12 w-11/12 md:h-[38vw] h-[50vw] mx-auto md:my-auto'>
+                                    <div className='md:w-6/12 w-11/12 md:h-[25vw] h-[50vw] mx-auto md:my-auto'>
                                         <iframe className="responsive-iframe"
                                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7249803314576!2d103.96114931399768!3d1.3413700619781364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3cd899f260cb%3A0x99becabc6d025518!2sSingapore%20University%20of%20Technology%20%26%20Design%20(SUTD)!5e0!3m2!1sen!2ssg!4v1653292770304!5m2!1sen!2ssg"
                                                 width="100%" height="100%" allowFullScreen="" loading="lazy"
@@ -286,25 +290,25 @@ export default class Carousel extends Component {
                     {(this.state.currentSlide === 6) ? (
                         <>
                         <div
-                            className='rounded-3xl md:h-auto h-[100vw] mt-10 bg-white w-11/12 backdrop-blur mx-auto bg-opacity-25 overflow-auto' data-aos={`${(this.state.previousSlide > 5) ? 'fade-right' : "fade-left"}`}>
+                            className='rounded-3xl mt-10 h-[98vw] py-6 md:h-auto bg-white w-11/12 backdrop-blur mx-auto bg-opacity-25 overflow-auto' data-aos={`${(this.state.previousSlide > 6) ? 'fade-right' : "fade-left"}`}>
                             <div
-                                className='text-black px-2 pt-20 text-center md:text-left pb-10'>
-                                <div className='w-full md:w-7/12 mx-auto pb-10 md:pb-0 '>
+                                className='text-black px-2 pt-10 md:py-20 text-center md:text-left'>
+                                <div className='w-full inline-block md:w-5/12 md:float-right md:pr-20'>
                                     <Image id='sutd-map' alt='sutd map' src={sutd_map}></Image>
                                 </div>
                             </div>
-                            <table className='mx-auto mt-4 hidden md:inline-block'>
+                            <table className='md:float-left pl-10 hidden md:inline-block'>
                                 <tr>
                                     <td>
-                                        <TbSquareArrowLeft className='text-white text-[6vw] pr-6 hover:text-black' onClick={this.prevSlide}/>
+                                        <TbSquareArrowLeft className='text-white text-[11vw] pl-20 hover:text-black' onClick={this.prevSlide}/>
                                     </td>
                                     <td>
-                                        <h1 className='text-[2vw] text-white'> Click here to go back to the previous page</h1>
+                                        <h1 className='text-[2.5vw] pl-10 text-white'> Click here to go<br></br> back to the previous page</h1>
                                     </td>
                                 </tr>
                                 </table>
                         </div>
-                        <table className='mx-auto mt-2 md:hidden'>
+                        <table className='mx-auto md:hidden'>
                             <tr>
                                 <td>
                                     <TbSquareArrowLeft className='text-white text-[16vw] pr-2' onClick={this.prevSlide}/>
@@ -322,11 +326,11 @@ export default class Carousel extends Component {
             {/* FAQ Slide */}
             {(this.state.currentSlide === 7) ? (
                 <section id='faq' className='text-center' data-aos={`${(this.state.previousSlide > 6) ? 'fade-right' : "fade-left"}`}>
-                         <div className='rounded-3xl md:h-screen h-[120vw] mt-10 bg-white w-11/12 backdrop-blur mx-auto bg-opacity-25 overflow-auto'>
+                         <div className='rounded-3xl mt-10 md:h-[35vw] h-[120vw] bg-white w-11/12 backdrop-blur mx-auto bg-opacity-25 overflow-scroll'>
                              <ol className='list-decimal text-black font-yatraone text-left md:px-20 px-14 py-4 md:text-lg text-sm'>
-                                 {questions.map((question) => {
+                                 {questions.map((question, index) => {
                                      return(
-                                         <div className=''>
+                                         <div>
                                              <li className='text-[#6B0B0B] pt-8'>{question.question}</li>
                                              <h1> {question.answer}</h1>
                                          </div>
@@ -337,8 +341,9 @@ export default class Carousel extends Component {
                     </section>
                 ): null}
              {(this.state.currentSlide === 8) ? (
-                <div className='md:h-screen h-auto' data-aos='fade-left'>
+                <div className='text-center' data-aos='fade-up' data-aos-duration="1000">
                 {/*    To put sponsors*/}
+                    <h1 className='md:text-[5vw] md:pt-[7vw] text-black md:px-0 pt-[50vw] text-[10vw] px-20'> Stay tuned for more information! </h1>
                 </div>
                 ): null}
             </>
