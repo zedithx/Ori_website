@@ -9,7 +9,7 @@ export const CountdownTimer = ({ targetDate }) => {
   if (days + hours + minutes + seconds <= 0) {
     return (
         <tr className='md:text-[4.5vw]'>
-            <td className='md:px-4'><Image src={countdownshape}/>00</td>
+            <td className='md:px-4'><Image alt='countdownshape' src={countdownshape}/>00</td>
           <td className='md:px-4'>00</td>
           <td className='md:px-4'>00</td>
           <td className='md:px-4'>00</td>
@@ -36,44 +36,44 @@ export const CountdownTimer = ({ targetDate }) => {
       <tr className='md:text-[3vw] text-[7vw] md:gap-4'>
           <td className='px-3 md:px-8'>
             <div className='w-[9vw] md:w-[4vw] inline-block relative mr-1 md:mr-3'>
-                <Image layout='responsive' src={countdownshape}/>
+                <Image layout='responsive' alt='countdownshape' src={countdownshape}/>
                 <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto'>{days_string[0]}</h1>
             </div>
               <div className='w-[9vw] md:w-[4vw] inline-block relative'>
-                  <Image layout='responsive' src={countdownshape}/>
+                  <Image layout='responsive' alt='countdownshape' src={countdownshape}/>
                   <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto'>{days_string[1]}</h1>
                 </div>
           </td>
             <td className='px-2 md:px-8'>
             <div className='w-[9vw] md:w-[4vw] inline-block relative mr-1 md:mr-3'>
-                <Image layout='responsive' src={countdownshape}/>
+                <Image layout='responsive' alt='countdownshape' src={countdownshape}/>
                 <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto'>{hours_string[0]}</h1>
             </div>
 
               <div className='w-[9vw] md:w-[4vw] inline-block relative'>
-                  <Image layout='responsive' src={countdownshape}/>
+                  <Image layout='responsive' alt='countdownshape' src={countdownshape}/>
                   <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto'>{hours_string[1]}</h1>
                 </div>
           </td>
           <td className='px-2 md:px-8'>
             <div className='w-[9vw] md:w-[4vw] inline-block relative mr-1 md:mr-3'>
-                <Image layout='responsive' src={countdownshape}/>
+                <Image layout='responsive' alt='countdownshape' src={countdownshape}/>
                 <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto'>{minutes_string[0]}</h1>
             </div>
 
               <div className='w-[9vw] md:w-[4vw] inline-block relative'>
-                  <Image layout='responsive' src={countdownshape}/>
+                  <Image layout='responsive' alt='countdownshape' src={countdownshape}/>
                   <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto'>{minutes_string[1]}</h1>
                 </div>
           </td>
           <td className='px-2 md:px-8'>
             <div className='w-[9vw] md:w-[4vw] inline-block relative mr-1 md:mr-3'>
-                <Image layout='responsive' src={countdownshape}/>
+                <Image layout='responsive' alt='countdownshape' src={countdownshape}/>
                 <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto'>{seconds_string[0]}</h1>
             </div>
 
               <div className='w-[9vw] md:w-[4vw] inline-block relative'>
-                  <Image layout='responsive' src={countdownshape}/>
+                  <Image layout='responsive' alt='countdownshape' src={countdownshape}/>
                   <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto'>{seconds_string[1]}</h1>
                 </div>
           </td>

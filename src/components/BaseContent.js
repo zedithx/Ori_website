@@ -124,13 +124,13 @@ export default class Carousel extends Component {
                 <div className='pt-[35vw] md:pt-[3vw] flex justify-center' data-aos='fade-right'>
                     <div className='inline-block md:w-6/12 relative'>
                         <div className='rotate-90 w-[120vw] md:w-full md:rotate-0'>
-                            <Image src={scroll} layout='responsive'/>
+                            <Image src={scroll} alt='storyline background' layout='responsive'/>
                         </div>
                         <div className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:w-2/3 w-1/2 md:text-[1vw] text-[2.8vw] text-black font-carvedwood'>
-                            <p>A long time ago, the ancient civilisation of Lumino thrived under the magnificent crystal blessings of the Great Guardians. It was led by the four esteemed houses: <span className='text-[#561D89]'><u>Obsida</u></span>, <span className='text-[#6C3100]'><u>Andesa</u></span>, <span className='text-[#306A42]'><u>Perida</u></span>, and <span className='text-[#461BD1]'><u>Lazura</u></span>.<br></br><br></br> One fateful day, the supply of crystals, the lifeblood of Lumino, came to an abrupt halt, plunging the houses into a state of confusion and worry. <br></br><br></br>Years passed, and just as hope waned, in a moment of miraculous wonder, a giant crystal plummeted from the sky, shattering into four uneven fragments. The four great houses each laid claim to the largest fragment, convinced that they alone held the key to Lumino's survival. <br></br><br></br>With tensions rising, each house must now vie fiercely and prove their worth to secure the largest share of the precious crystal. Time is of the essence, and the battle for glory has begun. Will you heed the call and join the fight to etch your name in history?</p>
+                            <p>A long time ago, the ancient civilisation of Lumino thrived under the magnificent crystal blessings of the Great Guardians. It was led by the four esteemed houses: <span className='text-[#561D89]'><u>Obsida</u></span>, <span className='text-[#6C3100]'><u>Andesa</u></span>, <span className='text-[#306A42]'><u>Perida</u></span>, and <span className='text-[#461BD1]'><u>Lazura</u></span>.<br></br><br></br> One fateful day, the supply of crystals, the lifeblood of Lumino, came to an abrupt halt, plunging the houses into a state of confusion and worry. <br></br><br></br>Years passed, and just as hope waned, in a moment of miraculous wonder, a giant crystal plummeted from the sky, shattering into four uneven fragments. The four great houses each laid claim to the largest fragment, convinced that they alone held the key to Lumino&apos;s survival. <br></br><br></br>With tensions rising, each house must now vie fiercely and prove their worth to secure the largest share of the precious crystal. Time is of the essence, and the battle for glory has begun. Will you heed the call and join the fight to etch your name in history?</p>
                         </div>
                         <div className='absolute md:bottom-0 md:right-0 -bottom-10 right-8 md:w-[12vw] w-[20vw]'>
-                        <Image src={totem} layout='responsive'/>
+                        <Image src={totem} alt='totem' layout='responsive'/>
                     </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@ export default class Carousel extends Component {
                     {(this.state.currentSlide === 1) ? (
                     <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
                         <div className='md:w-1/4 w-1/2'>
-                            <Image loading="eager" src={obsida_logo}/>
+                            <Image loading="eager" alt='obsida logo' src={obsida_logo}/>
                         </div>
                         <div className='text-[#561D89] pr-6 md:pr-0'>
                             <h1 className='md:text-[7.5vw] text-[17vw] pt-10 md:pt-20'>OBSIDA</h1>
@@ -179,7 +179,7 @@ export default class Carousel extends Component {
                     {(this.state.currentSlide === 2) ? (
                         <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
                             <div className='md:w-1/4 w-1/2'>
-                                <Image loading="eager" src={andesa_logo}/>
+                                <Image loading="eager" alt='andesa logo' src={andesa_logo}/>
                             </div>
                             <div className='text-[#6C3100] md:pl-10 pl-2 pr-6 md:pr-0'>
                                 <h1 className='md:text-[7.5vw] text-[17vw] pt-10 md:pt-20'>ANDESA</h1>
@@ -191,7 +191,7 @@ export default class Carousel extends Component {
                     {(this.state.currentSlide === 3) ? (
                         <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
                             <div className='md:w-1/4 w-1/2'>
-                                <Image loading="eager" src={perida_logo}/>
+                                <Image loading="eager" alt='perida logo' src={perida_logo}/>
                             </div>
                             <div className='text-[#306A42] pr-6 md:pr-0'>
                                 <h1 className='md:text-[7.5vw] text-[17vw] pt-10 md:pt-20'>PERIDA</h1>
@@ -203,7 +203,7 @@ export default class Carousel extends Component {
                     {(this.state.currentSlide === 4) ? (
                         <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
                             <div className='md:w-1/4 w-1/2'>
-                                <Image loading="eager" src={lazura_logo}/>
+                                <Image loading="eager" alt='lazura logo' src={lazura_logo}/>
                             </div>
                             <div className='text-[#461BD1] pr-6 md:pr-0'>
                                 <h1 className='md:text-[7.5vw] text-[17vw] pt-10 md:pt-20'>LAZURA</h1>
@@ -330,7 +330,7 @@ export default class Carousel extends Component {
                              <ol className='list-decimal text-black font-yatraone text-left md:px-20 px-14 py-4 md:text-lg text-sm'>
                                  {questions.map((question, index) => {
                                      return(
-                                         <div>
+                                         <div key={index}>
                                              <li className='text-[#6B0B0B] pt-8'>{question.question}</li>
                                              <h1> {question.answer}</h1>
                                          </div>
