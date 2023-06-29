@@ -48,7 +48,7 @@ export default function Orientation() {
                 <div className={`${show ? "hidden" : styles.fadeInBottom}`}>
                 <section id='countdown' className='font-carvedwood text-white text-center bg-[url("../../public/images/backgrounds/civilisation(new).png")] bg-cover bg-no-repeat h-screen bg-center'>
                     <div className='absolute left-4 top-4 md:w-[12vw] w-[30vw]'>
-                        <a href='https://www.sutd.edu.sg/' target='_blank' rel="noopener noreferrer"><Image src={sutd_logo}/></a>
+                        <a href='https://www.sutd.edu.sg/' target='_blank' rel="noopener noreferrer"><Image alt='sutdlogo' src={sutd_logo}/></a>
                     </div>
                     <div className='absolute right-4 top-4'>
                         <div className='flex flex-row md:gap-2'>
@@ -105,7 +105,7 @@ export default function Orientation() {
                             <SlArrowUp className='cursor-pointer md:text-[4vw] text-[12vw] text-white' onClick={() => setShow(false)}/>
                         </div>
                         <div className='absolute left-4 top-4 md:w-[12vw] w-[30vw]'>
-                            <a href='https://www.sutd.edu.sg/' target='_blank' rel="noopener noreferrer"><Image src={sutd_logo}/></a>
+                            <a href='https://www.sutd.edu.sg/' target='_blank' rel="noopener noreferrer"><Image alt='sutdlogo' src={sutd_logo}/></a>
                         </div>
                         <div className='w-[4vw] hidden mx-auto items-center md:flex'>
                             <SlArrowUp className='cursor-pointer md:text-[4vw] text-[12vw] text-white' onClick={() => setShow(false)}/>
