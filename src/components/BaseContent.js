@@ -13,6 +13,7 @@ import obsida_logo from "../../public/images/logo/obsida.png"
 import andesa_logo from "../../public/images/logo/andesa.png"
 import perida_logo from "../../public/images/logo/perida.png"
 import lazura_logo from "../../public/images/logo/lazura.png"
+import nav_logo from "../../public/images/logo/nav_logo.png"
 import {TbSquareArrowLeft, TbSquareArrowRight} from "react-icons/tb";
 import sutd_map from "../../public/images/sutd_map.png";
 import {AiOutlineInstagram} from "react-icons/ai";
@@ -22,6 +23,11 @@ import setShow from "../app/page"
 
 
 const questions = [
+    {
+        question:"How do I sign up for orientation?",
+        //{image} to be swapped with the nav image when generating to display the list of FAQ
+        answer: "To submit orientation eform, please proceed to MyPortal, click {image} at the top right-hand bar and look for Self Service > Forms Download > OMEx Forms.",
+    },
     {
         question: "Can I come for orientation if I missed the sign-ups?",
         answer: 'Please sign up during the sign-up period as these numbers are taken into account for planning purposes, such as food and T-shirts. We cannot guarantee that you can still attend orientation if you miss the sign-ups.'
@@ -56,7 +62,7 @@ const questions = [
     },
     {
         question: "When will I know that I have successfully registered for orientation?",
-        answer: 'You will receive an email confirmation after registration. Your Orientation Group Leaders will also be adding you to a group chat within 2 weeks of the start of orientation!'
+        answer: 'You will receive an email confirmation shortly after registration closes'
     },
     {
         question: "I have some physical issues with moving from point to point, will I still be able to take part in orientation?",
@@ -139,7 +145,7 @@ export default class Carousel extends Component {
 
             {/*Houses slide*/}
             {(this.state.currentSlide < 5 && this.state.currentSlide > 0) ? (
-            <div className='md:pt-[4vw] py-[10vw] h-full text-white' data-aos={`${(this.state.previousSlide > 1) ? 'fade-right' : "fade-left"}`}>
+            <div className='md:pt-[4vw] py-[10vw] md:backdrop-blur-sm h-full text-white' data-aos={`${(this.state.previousSlide > 1) ? 'fade-right' : "fade-left"}`}>
                 {/*Navigation Bar for Houses*/}
                 <div className='flex md:flex-col flex-row md:float-left justify-center pb-[4vw] md:pb-0 md:text-[5vw] text-[7.5vw] gap-6 md:pl-24'>
                     <div className={`${(this.state.currentSlide === 1) ? 'underline opacity-100' : 'opacity-20'}`}>
@@ -164,53 +170,176 @@ export default class Carousel extends Component {
                     </div>
                 </div>
                 {/*content to display based on house selected*/}
+                    {/*Obsida House*/}
                     {(this.state.currentSlide === 1) ? (
-                    <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
-                        <div className='md:w-1/4 w-1/2'>
-                            <Image loading="eager" alt='obsida logo' src={obsida_logo}/>
+                    <div className='flex flex backdrop-blur-sm h-full' data-aos='zoom-in'>
+                        {/*Blur background to make text easier to see*/}
+                        {/*Desktop Version*/}
+                        {/*Create 1 row and create right padding*/}
+                        <div className='flex flex-row md:float left md:pr-20'>
+                            {/*House logo image takes up 25% width of the row*/}
+                            <div className='md:w-1/4 hidden md:block'>
+                                <Image class="object-fit: cover" loading="eager" alt='obsida logo' src={obsida_logo}/>
+                            </div>
+                            {/*For 2nd coloumn in the row create 6 rows occupying 75% of the parent row*/}
+                            <div className='flex flex-col text-left md:w-3/4 hidden md:block'>
+                                <h1 className='md:text-[5vw] text-[#561D89] text-center md:pt-5'>💜 House of OBSIDA 💜</h1>
+                                <h3 className='text-[#561D89] text-center md:text-[3vw]'>AKA THE BLACKSMITHS</h3>
+                                <br></br>
+                                <h2 className='md:text-[1.75vw] text-[#7627bc]'>It is the house that provides defence against threats for ✨ LUMINO ✨ and supplies powerful, indestructible weapons ⚔️🛡️. They rely on the crystal to craft these armaments. Without them, ✨ LUMINO ✨ will be vulnerable and incapable of fending for themselves. It is said that the weapons they forge are even fit for gods 💪! Want to be part of this amazing and powerful house?</h2>
+                                <br></br><br></br>
+                                <h2 className='text-center text-[4vw]'>Sign up for the Freshmen Orientation 2023!</h2>
+                            </div>
                         </div>
-                        <div className='text-[#561D89] pr-6 md:pr-0'>
-                            <h1 className='md:text-[7.5vw] text-[17vw] pt-10 md:pt-20'>OBSIDA</h1>
-                            <br></br>
-                                    <h1 className='md:text-[3vw] text-[6vw]'>AKA THE BLACKSMITHS</h1>
+                        {/*Mobile Version*/}
+                        <div className='flew flex-row pr-6 md:hidden'>
+                            {/*Create 2 rows*/}
+                            <div className='flex flex-row'>
+                                {/*House logo image takes up 33.333% width of the row*/}
+                                <div className='w-1/3'>
+                                    <Image class="object-fit: cover" loading="eager" alt='obsida logo' src={obsida_logo}/>
+                                </div>
+                                {/*For 2nd coloumn in the row create 2 rows occupying 66.667% of the parent row*/}
+                                <div className='flex flex-col w-2/3 justify-center'>
+                                    <h1 className='text-[#561D89] text-center text-[7.5vw] '>💜 House of OBSIDA 💜</h1>
+                                    <h3 className='text-[#561D89] text-center text-[5vw]'>AKA THE BLACKSMITHS</h3>
+                                </div>
+                            </div>
+                            <div className='pl-8'>
+                                <h2 className='text-[4vw] text-[#7627bc] text-left'>It is the house that provides defence against threats for ✨ LUMINO ✨ and supplies powerful, indestructible weapons ⚔️🛡️. They rely on the crystal to craft these armaments. Without them, ✨ LUMINO ✨ will be vulnerable and incapable of fending for themselves. It is said that the weapons they forge are even fit for gods 💪! Want to be part of this amazing and powerful house?</h2>
+                                <br></br>
+                                <h2 className='text-center text-[10vw]'>Sign up for the Freshmen Orientation 2023!</h2>
+                            </div>
                         </div>
                     </div>
                         ): null}
+                    {/*Andesa House*/}
                     {(this.state.currentSlide === 2) ? (
-                        <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
-                            <div className='md:w-1/4 w-1/2'>
-                                <Image loading="eager" alt='andesa logo' src={andesa_logo}/>
+                    <div className='flex flex backdrop-blur-sm h-full' data-aos='zoom-in'>
+                        {/*Blur background to make text easier to see*/}
+                        {/*Desktop Version*/}
+                        {/*Create 1 row and create right padding*/}
+                        <div className='flex flex-row md:float left md:pr-20'>
+                            {/*House logo image takes up 25% width of the row*/}
+                            <div className='md:w-1/4 hidden md:block'>
+                                <Image class="object-fit: cover" loading="eager" alt='andesa logo' src={andesa_logo}/>
                             </div>
-                            <div className='text-[#6C3100] md:pl-10 pl-2 pr-6 md:pr-0'>
-                                <h1 className='md:text-[7.5vw] text-[17vw] pt-10 md:pt-20'>ANDESA</h1>
+                            {/*For 2nd coloumn in the row create 6 rows occupying 75% of the parent row*/}
+                            <div className='flex flex-col text-left md:w-3/4 hidden md:block'>
+                                <h1 className='md:text-[5vw] text-[#6C3100] text-center md:pt-5'>🧡 House of ANDESA 🧡</h1>
+                                <h3 className='text-[#6C3100] text-center md:text-[3vw]'>AKA THE ARCHITECTS</h3>
                                 <br></br>
-                                    <h1 className='md:text-[3vw] text-[6vw]'>AKA THE ARCHITECTS</h1>
+                                <h2 className='md:text-[1.75vw] text-[#924200]'>Cosy houses 🏠, eye-catching skyscrapers 🏙️, magnificent castles 🏰,... they are responsible for them all. Skilled in architecture 🛠️ and masters in the laws of physics ⚙️, they are able to build strong and stable buildings. Together with the use of the crystals, the buildings they build are so strong that they are able to withstand all forms of natural disasters 🌊☄️⚡️. Want to be part of this amazing and powerful house?</h2>
+                                <br></br><br></br>
+                                <h2 className='text-center text-[4vw]'>Sign up for the Freshmen Orientation 2023!</h2>
                             </div>
                         </div>
+                        {/*Mobile Version*/}
+                        <div className='flew flex-row pr-6 md:hidden'>
+                            {/*Create 2 rows*/}
+                            <div className='flex flex-row'>
+                                {/*House logo image takes up 33.333% width of the row*/}
+                                <div className='w-1/3'>
+                                    <Image class="object-fit: cover" loading="eager" alt='andesa logo' src={andesa_logo}/>
+                                </div>
+                                {/*For 2nd coloumn in the row create 2 rows occupying 66.667% of the parent row*/}
+                                <div className='flex flex-col w-2/3 justify-center'>
+                                    <h1 className='text-[#6C3100] text-center text-[7.5vw] '>🧡 House of ANDESA 🧡</h1>
+                                    <h3 className='text-[#6C3100] text-center text-[5vw]'>AKA THE ARCHITECTS</h3>
+                                </div>
+                            </div>
+                            <div className='pl-8'>
+                                <h2 className='text-[4vw] text-[#924200] text-left'>Cosy houses 🏠, eye-catching skyscrapers 🏙️, magnificent castles 🏰,... they are responsible for them all. Skilled in architecture 🛠️ and masters in the laws of physics ⚙️, they are able to build strong and stable buildings. Together with the use of the crystals, the buildings they build are so strong that they are able to withstand all forms of natural disasters 🌊☄️⚡️. Want to be part of this amazing and powerful house?</h2>
+                                <br></br>
+                                <h2 className='text-center text-[10vw]'>Sign up for the Freshmen Orientation 2023!</h2>
+                            </div>
+                        </div>
+                    </div>
                         ): null}
+                    {/*Perida House*/}    
                     {(this.state.currentSlide === 3) ? (
-                        <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
-                            <div className='md:w-1/4 w-1/2'>
-                                <Image loading="eager" alt='perida logo' src={perida_logo}/>
+                    <div className='flex flex backdrop-blur-sm h-full' data-aos='zoom-in'>
+                        {/*Blur background to make text easier to see*/}
+                        {/*Desktop Version*/}
+                        {/*Create 1 row and create right padding*/}
+                        <div className='flex flex-row md:float left md:pr-20'>
+                            {/*House logo image takes up 25% width of the row*/}
+                            <div className='md:w-1/4 hidden md:block'>
+                                <Image class="object-fit: cover" loading="eager" alt='perida logo' src={perida_logo}/>
                             </div>
-                            <div className='text-[#306A42] pr-6 md:pr-0'>
-                                <h1 className='md:text-[7.5vw] text-[17vw] pt-10 md:pt-20'>PERIDA</h1>
+                            {/*For 2nd coloumn in the row create 6 rows occupying 75% of the parent row*/}
+                            <div className='flex flex-col text-left md:w-3/4 hidden md:block'>
+                                <h1 className='md:text-[5vw] text-[#306A42] text-center md:pt-5'>💚 House of PERIDA 💚</h1>
+                                <h3 className='text-[#306A42] text-center md:text-[3vw]'>AKA THE HEALERS</h3>
                                 <br></br>
-                                    <h1 className='md:text-[3vw] text-[6vw]'>AKA THE HEALERS</h1>
+                                <h2 className='md:text-[1.75vw] text-[#377b4c]'>Fallen sick 🤒 ? Do not fear for these healers are able to cure any illness and ailment that exists in the world 🌎🦠. There has even been a rumour that says that with the power of the crystals, they are able to revive the dead💀 and make one live on for all eternity🍀. However, no one knows how true these rumours are… 🧪🩺🧬 Want to be part of this amazing and powerful house?</h2>
+                                <br></br><br></br>
+                                <h2 className='text-center text-[4vw]'>Sign up for the Freshmen Orientation 2023!</h2>
                             </div>
                         </div>
+                        {/*Mobile Version*/}
+                        <div className='flew flex-row pr-6 md:hidden'>
+                            {/*Create 2 rows*/}
+                            <div className='flex flex-row'>
+                                {/*House logo image takes up 33.333% width of the row*/}
+                                <div className='w-1/3'>
+                                    <Image class="object-fit: cover" loading="eager" alt='perida logo' src={perida_logo}/>
+                                </div>
+                                {/*For 2nd coloumn in the row create 2 rows occupying 66.667% of the parent row*/}
+                                <div className='flex flex-col w-2/3 justify-center'>
+                                    <h1 className='text-[#306A42] text-center text-[7.5vw] '>💚 House of PERIDA 💚</h1>
+                                    <h3 className='text-[#306A42] text-center text-[5vw]'>AKA THE HEALERS</h3>
+                                </div>
+                            </div>
+                            <div className='pl-8'>
+                                <h2 className='text-[4vw] text-[#377b4c] text-left'>Fallen sick 🤒 ? Do not fear for these healers are able to cure any illness and ailment that exists in the world 🌎🦠. There has even been a rumour that says that with the power of the crystals, they are able to revive the dead💀 and make one live on for all eternity🍀. However, no one knows how true these rumours are… 🧪🩺🧬 Want to be part of this amazing and powerful house?</h2>
+                                <br></br>
+                                <h2 className='text-center text-[10vw]'>Sign up for the Freshmen Orientation 2023!</h2>
+                            </div>
+                        </div>
+                    </div>
                     ): null}
+                    {/*Lazura House*/}
                     {(this.state.currentSlide === 4) ? (
-                        <div className='flex flex-wrap justify-center pt-10 md:pt-10' data-aos='zoom-in'>
-                            <div className='md:w-1/4 w-1/2'>
-                                <Image loading="eager" alt='lazura logo' src={lazura_logo}/>
+                    <div className='flex flex backdrop-blur-sm h-full' data-aos='zoom-in'>
+                        {/*Blur background to make text easier to see*/}
+                        {/*Desktop Version*/}
+                        {/*Create 1 row and create right padding*/}
+                        <div className='flex flex-row md:float left md:pr-20'>
+                            {/*House logo image takes up 25% width of the row*/}
+                            <div className='md:w-1/4 hidden md:block'>
+                                <Image class="object-fit: cover" loading="eager" alt='lazura logo' src={lazura_logo}/>
                             </div>
-                            <div className='text-[#461BD1] pr-6 md:pr-0'>
-                                <h1 className='md:text-[7.5vw] text-[17vw] pt-10 md:pt-20'>LAZURA</h1>
+                            {/*For 2nd coloumn in the row create 6 rows occupying 75% of the parent row*/}
+                            <div className='flex flex-col text-left md:w-3/4 hidden md:block'>
+                                <h1 className='md:text-[5vw] text-[#461BD1] text-center md:pt-5'>💙 House of LAZURA 💙</h1>
+                                <h3 className='text-[#461BD1] text-center md:text-[3vw]'>AKA THE ARTISTS</h3>
                                 <br></br>
-                                    <h1 className='md:text-[3vw] text-[6vw]'>AKA THE ARTISTS</h1>
+                                <h2 className='md:text-[1.75vw] text-[#5529e3]'>You are able to identify them from a mile away as they pride themselves for having the best aesthetics 🌟 and fashion taste  👔👗. They decorate ✨ LUMINO ✨ with their brilliant artworks 🎨, creating an uplifting and colourful place for all civilians to live 🌈. Artworks made with the crystals are especially striking, glittering like stars in daylight, and may even contain magical powers 💫 if the artist poured out their heart and soul into making them.🔮 Want to be part of this amazing and powerful house?</h2>
+                                <br></br><br></br>
+                                <h2 className='text-center text-[4vw]'>Sign up for the Freshmen Orientation 2023!</h2>
                             </div>
                         </div>
+                        {/*Mobile Version*/}
+                        <div className='flew flex-row pr-6 md:hidden'>
+                            {/*Create 2 rows*/}
+                            <div className='flex flex-row'>
+                                {/*House logo image takes up 33.333% width of the row*/}
+                                <div className='w-1/3'>
+                                    <Image class="object-fit: cover" loading="eager" alt='lazura logo' src={lazura_logo}/>
+                                </div>
+                                {/*House logo image takes up 33.333% width of the row*/}
+                                <div className='flex flex-col w-2/3 justify-center'>
+                                    <h1 className='text-[#461BD1] text-center text-[7.5vw] '>💙 House of LAZURA 💙</h1>
+                                    <h3 className='text-[#461BD1] text-center text-[5vw]'>AKA THE ARTISTS</h3>
+                                </div>
+                            </div>
+                            <div className='pl-8'>
+                                <h2 className='text-[4vw] text-[#5529e3] text-left'>You are able to identify them from a mile away as they pride themselves for having the best aesthetics 🌟 and fashion taste  👔👗. They decorate ✨ LUMINO ✨ with their brilliant artworks 🎨, creating an uplifting and colourful place for all civilians to live 🌈. Artworks made with the crystals are especially striking, glittering like stars in daylight, and may even contain magical powers 💫 if the artist poured out their heart and soul into making them.🔮 Want to be part of this amazing and powerful house?</h2>
+                                <h2 className='text-center text-[10vw]'>Sign up for the Freshmen Orientation 2023!</h2>
+                            </div>
+                        </div>
+                    </div>
                     ): null}
             </div>
             ): null}
@@ -331,8 +460,18 @@ export default class Carousel extends Component {
                                  {questions.map((question, index) => {
                                      return(
                                          <div key={index}>
-                                             <li className='text-[#6B0B0B] pt-8'>{question.question}</li>
-                                             <h1> {question.answer}</h1>
+                                            <li className='text-[#6B0B0B] pt-8'>{question.question}</li>
+                                            <div>
+                                                {/*Check if it is the first element to add in the nav image else just display the answer*/
+                                                (index === 0) ? (
+                                                    <h1 className="flex-1 justify-center align-item-center">
+                                                        {/*Find out the index of { and } to add in the nav image and create 2 substrings 1 before where the nav image should go and 1 after then insert the image inbetween*/}
+                                                        {question.answer.substring(0, question.answer.search("{"))}
+                                                        <Image className='inline-block object-cover h-5 w-5 md:h-7 md:w-7' id='nav_logo' alt='eager' src={nav_logo}></Image>
+                                                        {question.answer.substring(question.answer.search("}")+1)}
+                                                    </h1>
+                                                ):<h1>{question.answer}</h1>}
+                                            </div>
                                          </div>
                                     )
                                  })}
