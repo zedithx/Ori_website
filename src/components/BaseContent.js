@@ -20,6 +20,14 @@ import {AiOutlineInstagram} from "react-icons/ai";
 import {IoMdMail} from "react-icons/io";
 import {SlArrowUp} from "react-icons/sl";
 import setShow from "../app/page"
+import artfriend from "../../public/images/logo/sponsors/artfriend.jpg";
+import eltelierworks from "../../public/images/logo/sponsors/eltelierworks.jpg";
+import holoetechnik from "../../public/images/logo/sponsors/holoetechnik.png";
+import huion from "../../public/images/logo/sponsors/huion.png";
+import kimkbbq from "../../public/images/logo/sponsors/kimkbbq.png";
+import milksha from "../../public/images/logo/sponsors/milksha.png";
+import pilot from "../../public/images/logo/sponsors/pilot.jpg";
+import stives from "../../public/images/logo/sponsors/stives.jpg";
 
 
 const questions = [
@@ -42,7 +50,7 @@ const questions = [
     },
     {
         question: "Do I have to stay overnight during orientation?",
-        answer: 'You will have checked-in to your room prior to orientation. Staying in your allocated room would be recommended as it would be more convenient for the 3 full days of activity.'
+        answer: 'You will have checked-in to your room prior to Orientation. Staying in your allocated room would be recommended as it would be more convenient for the 3 full days of activity.'
     },
     {
         question: "Will food be provided?",
@@ -482,7 +490,32 @@ export default class Carousel extends Component {
              {(this.state.currentSlide === 8) ? (
                 <div className='text-center' data-aos='fade-up' data-aos-duration="1000">
                 {/*    To put sponsors*/}
-                    <h1 className='md:text-[5vw] md:pt-[7vw] text-black md:px-0 pt-[50vw] text-[10vw] px-20'> Stay tuned for more information! </h1>
+                     <div className='flex flex-wrap justify-center overflow-auto bg-white w-11/12 gap-10 rounded-lg mx-auto my-10 p-10'>
+                    <div className='md:w-1/6 w-1/4'>
+                        <Image src={artfriend} layout='responsive'/>
+                    </div>
+                    <div className='md:w-1/6 w-1/4'>
+                        <Image src={eltelierworks} layout='responsive'/>
+                    </div>
+                    <div className='md:w-1/6 w-1/4'>
+                        <Image src={holoetechnik} layout='responsive'/>
+                    </div>
+                    <div className='md:w-1/6 w-1/4'>
+                        <Image src={huion} layout='responsive'/>
+                    </div>
+                    <div className='md:w-1/6 w-1/4'>
+                        <Image src={kimkbbq} layout='responsive'/>
+                    </div>
+                    <div className='md:w-1/6 w-1/4'>
+                        <Image src={milksha} layout='responsive'/>
+                    </div>
+                    <div className='md:w-1/6 w-1/4'>
+                        <Image src={pilot} layout='responsive'/>
+                    </div>
+                    <div className='md:w-1/6 w-1/4'>
+                        <Image src={stives} layout='responsive'/>
+                    </div>
+                    </div>
                 </div>
                 ): null}
             </>
